@@ -1,3 +1,3 @@
-import { Formulario } from "./Formulario"
+import { Formulario } from "./Formulario";
 
-export default Formulario
+export default Formulario;

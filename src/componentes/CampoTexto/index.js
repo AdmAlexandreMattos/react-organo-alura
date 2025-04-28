@@ -1,3 +1,3 @@
-import { CampoTexto } from "./CampoTexto"
+import { CampoTexto } from "./CampoTexto";
 
-export default CampoTexto
+export default CampoTexto;

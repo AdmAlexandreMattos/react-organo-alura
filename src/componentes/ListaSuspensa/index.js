@@ -1,3 +1,3 @@
-import { ListaSuspensa } from "./ListaSuspensa"
+import { ListaSuspensa } from "./ListaSuspensa";
 
-export default ListaSuspensa
+export default ListaSuspensa;
