@@ -5,16 +5,6 @@ import { useState } from "react";
 import "./Formulario.css";
 
 export const Formulario = (props) => {
-  const times = [
-    "Programação",
-    "Front-End",
-    "Data Science",
-    "Devops",
-    "UX e Desing",
-    "Mobile",
-    "Inovação e Gestão",
-  ];
-
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
@@ -59,7 +49,7 @@ export const Formulario = (props) => {
           aoAlterar={(valor) => setTime(valor)}
           obrigatorio={true}
           label="Time"
-          itens={times}
+          itens={props.times}
         />
         <Botao>Criar Card</Botao>
       </form>
