@@ -49,6 +49,10 @@ function App() {
     setColaboradores([...colaboradores, colaborador]);
   };
 
+  function deletarColaborador() {
+    console.log("Teste");
+  }
+
   return (
     <div className="App">
       <Banner />
@@ -59,15 +63,14 @@ function App() {
         }
       />
 
-      {times.map((time) => (
+      {times.map((time, indice) => (
         <Time
-          key={time.nome}
-          nomeTime={time.nome}
-          corPrimaria={time.corPrimaria}
-          corSecundaria={time.corSecundaria}
+          key={indice}
+          time={time}
           colaboradores={colaboradores.filter(
             (colaborador) => colaborador.time === time.nome
           )}
+          aoDeletar={deletarColaborador}
         />
       ))}
       <Rodape />
