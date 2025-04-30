@@ -4,12 +4,7 @@ Este projeto foi desenvolvido como parte do curso de React da Alura, com foco na
 
 Link do curso:
 - [React: desenvolvendo com JavaScript](https://cursos.alura.com.br/course/react-desenvolvendo-javascript)
-
-## ✨ O que você vai ver aqui
-
-- ⚛️ Implementar componentes reativos e reutilizáveis  
-- 🔧 Modificar e evoluir componentes de acordo com a necessidade do projeto  
-- 🚀 Prototipar uma aplicação do zero até o deploy  
+- [React: como os componentes funcionam](https://cursos.alura.com.br/course/react-componentes-funcionam)
 
 ## 👨‍🏫 Professores
 
@@ -41,4 +36,3 @@ Você também verá eventuais erros de lint no console.
 
 - [Documentação do Create React App (em inglês)](https://facebook.github.io/create-react-app/docs/getting-started)  
 - [Documentação do React (em inglês)](https://reactjs.org/)  
-- [Cursos de React na Alura](https://www.alura.com.br/cursos-online-front-end/react)
