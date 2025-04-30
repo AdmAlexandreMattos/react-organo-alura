@@ -1,6 +1,7 @@
 # Curso de React com Create React App 🚀
 
 Este projeto foi desenvolvido como parte do curso de React da Alura, com foco na construção de aplicações modernas utilizando o Create React App. Durante o curso, você aprenderá conceitos fundamentais do React e como aplicá-los na prática — da prototipação até o deploy da aplicação.
+
 Link do curso:
 - [React: desenvolvendo com JavaScript](https://cursos.alura.com.br/course/react-desenvolvendo-javascript)
 
