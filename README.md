@@ -1,70 +1,43 @@
-# Getting Started with Create React App
+# Curso de React com Create React App 🚀
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este projeto foi desenvolvido como parte do curso de React da Alura, com foco na construção de aplicações modernas utilizando o Create React App. Durante o curso, você aprenderá conceitos fundamentais do React e como aplicá-los na prática — da prototipação até o deploy da aplicação.
+Link do curso:
+- [React: desenvolvendo com JavaScript](https://cursos.alura.com.br/course/react-desenvolvendo-javascript)
 
-## Available Scripts
+## ✨ O que você vai ver aqui
 
-In the project directory, you can run:
+- ⚛️ Implementar componentes reativos e reutilizáveis  
+- 🔧 Modificar e evoluir componentes de acordo com a necessidade do projeto  
+- 🚀 Prototipar uma aplicação do zero até o deploy  
 
-### `npm start`
+## 👨‍🏫 Professores
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+### Paulo Silveira  
+CEO e cofundador da Alura. Bacharel e mestre em Ciência da Computação pela USP, teve sua carreira formada com PHP, Java e maratonas de programação. Criador do [Guj.com.br](https://www.guj.com.br/), do [podcast Hipsters.tech](https://hipsters.tech/) e do [Like a Boss](https://likeaboss.com.br/).
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### Vinicios Neves  
+Tech Lead e Educador, mistura código e didática há mais de uma década. Especialista em TypeScript, lidera equipes full-stack em Portugal e inspira futuros desenvolvedores na FIAP e na Alura. Com um pé no código e outro no ensino, Vinicios mostra que engenharia de software vai muito além das linhas de código — e sim, ele é sênior em dizer que "depende". 😄
 
-### `npm test`
+---
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Primeiros Passos com Create React App
 
-### `npm run build`
+Este projeto foi inicializado com o [Create React App](https://github.com/facebook/create-react-app).
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### Scripts Disponíveis
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+No diretório do projeto, você pode executar:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### `npm start`  
+Executa o aplicativo em modo de desenvolvimento.  
+Abra [http://localhost:3000](http://localhost:3000) para visualizá-lo no navegador.  
+A página será recarregada sempre que você fizer alterações.  
+Você também verá eventuais erros de lint no console.
 
-### `npm run eject`
+---
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+## 📚 Documentação e Recursos
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Documentação do Create React App (em inglês)](https://facebook.github.io/create-react-app/docs/getting-started)  
+- [Documentação do React (em inglês)](https://reactjs.org/)  
+- [Cursos de React na Alura](https://www.alura.com.br/cursos-online-front-end/react)
