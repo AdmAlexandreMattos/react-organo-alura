@@ -50,6 +50,10 @@ function App() {
     setColaboradores([...colaboradores, colaborador]);
   };
 
+  const cadastrarTime = (novoTime) => {
+    setTimes([...times, { ...novoTime, id: uuidv4() }]);
+  };
+
   function deletarColaborador(id) {
     setColaboradores(
       colaboradores.filter((colaborador) => colaborador.id !== id)
@@ -75,6 +79,7 @@ function App() {
         aoColaboradorCadastrado={(colaborador) =>
           aoNovoColaboradorAdicionado(colaborador)
         }
+        cadastrarTime={(colaborador) => cadastrarTime(colaborador)}
       />
 
       {times.map((time, indice) => (
