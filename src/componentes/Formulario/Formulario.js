@@ -20,11 +20,12 @@ export const Formulario = ({
   const aoSalvar = (evento) => {
     evento.preventDefault();
     aoColaboradorCadastrado({
+      id: uuidv4(),
+      favorito: false,
       nome,
       cargo,
       imagem,
       time,
-      id: uuidv4(),
     });
     setNome("");
     setCargo("");
