@@ -2,6 +2,7 @@ import ListaSuspensa from "../ListaSuspensa";
 import { Botao } from "../Botao/Botao";
 import { CampoTexto } from "../CampoTexto/CampoTexto";
 import { useState } from "react";
+import { v4 as uuidv4 } from "uuid";
 import "./Formulario.css";
 
 export const Formulario = (props) => {
@@ -17,6 +18,7 @@ export const Formulario = (props) => {
       cargo,
       imagem,
       time,
+      id: uuidv4(),
     });
     setNome("");
     setCargo("");
