@@ -1,6 +1,6 @@
 import ListaSuspensa from "../ListaSuspensa";
 import { Botao } from "../Botao/Botao";
-import { CampoTexto } from "../CampoTexto/CampoTexto";
+import { Campo } from "../Campo/Campo";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./Formulario.css";
@@ -36,21 +36,21 @@ export const Formulario = ({
     <section className="formulario">
       <form onSubmit={aoSalvar}>
         <h2>Preencha os dados para criar o card do colaborador.</h2>
-        <CampoTexto
+        <Campo
           valor={nome}
           aoAlterar={(valor) => setNome(valor)}
           obrigatorio={true}
           label="Nome"
           placeholder="Digite seu nome"
         />
-        <CampoTexto
+        <Campo
           valor={cargo}
           aoAlterar={(valor) => setCargo(valor)}
           obrigatorio={true}
           label="Cargo"
           placeholder="Digite seu cargo"
         />
-        <CampoTexto
+        <Campo
           valor={imagem}
           aoAlterar={(valor) => setImagem(valor)}
           label="Imagem"
@@ -77,14 +77,15 @@ export const Formulario = ({
         }}
       >
         <h2>Preencha os dados para criar um novo time.</h2>
-        <CampoTexto
+        <Campo
           valor={nomeTime}
           aoAlterar={(valor) => setNomeTime(valor)}
           obrigatorio
           label="Nome"
           placeholder="Digite o nome do time"
         />
-        <CampoTexto
+        <Campo
+          type="color"
           valor={corTime}
           aoAlterar={(valor) => setCorTime(valor)}
           obrigatorio
