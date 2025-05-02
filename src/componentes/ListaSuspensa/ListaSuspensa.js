@@ -10,8 +10,8 @@ export const ListaSuspensa = (props) => {
         value={props.valor}
       >
         <option value=""></option>
-        {props.itens.map((item) => (
-          <option key={item}>{item}</option>
+        {props.itens.map((item, indice) => (
+          <option key={indice}>{item}</option>
         ))}
       </select>
     </div>
