@@ -5,13 +5,18 @@ export const ListaSuspensa = (props) => {
     <div className="campo-lista-suspensa">
       <label>{props.label}</label>
       <select
-        onChange={(evento) => props.aoAlterar(evento.target.value)}
+        onChange={(evento) => props.aoAlterar(JSON.parse(evento.target.value))}
         required={props.obrigatorio}
-        value={props.valor}
+        value={JSON.stringify({ idTime: props.idTime, nomeTime: props.valor })}
       >
-        <option value=""></option>
+        <option value="">Selecione um time</option>
         {props.itens.map((item, indice) => (
-          <option key={indice}>{item}</option>
+          <option
+            key={indice}
+            value={JSON.stringify({ idTime: item.id, nomeTime: item.nome })}
+          >
+            {item.nome}
+          </option>
         ))}
       </select>
     </div>

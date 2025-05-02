@@ -51,7 +51,7 @@ function App() {
   };
 
   const cadastrarTime = (novoTime) => {
-    setTimes([...times, { ...novoTime, id: uuidv4() }]);
+    setTimes([...times, { id: uuidv4(), ...novoTime }]);
   };
 
   function deletarColaborador(id) {
@@ -84,7 +84,7 @@ function App() {
     <div className="App">
       <Banner />
       <Formulario
-        times={times.map((time) => time.nome)}
+        times={times}
         aoColaboradorCadastrado={(colaborador) =>
           aoNovoColaboradorAdicionado(colaborador)
         }
@@ -98,7 +98,7 @@ function App() {
           mudarCor={mudarCorDoTime}
           time={time}
           colaboradores={colaboradores.filter(
-            (colaborador) => colaborador.time === time.nome
+            (colaborador) => colaborador.idTime === time.id
           )}
           aoDeletar={deletarColaborador}
         />

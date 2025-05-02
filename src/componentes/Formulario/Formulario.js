@@ -14,8 +14,10 @@ export const Formulario = ({
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
   const [time, setTime] = useState("");
+  const [idTime, setIdTime] = useState("");
+
   const [nomeTime, setNomeTime] = useState("");
-  const [corTime, setCorTime] = useState("");
+  const [corTime, setCorTime] = useState("#000000");
 
   const aoSalvar = (evento) => {
     evento.preventDefault();
@@ -26,6 +28,7 @@ export const Formulario = ({
       cargo,
       imagem,
       time,
+      idTime,
     });
     setNome("");
     setCargo("");
@@ -59,7 +62,11 @@ export const Formulario = ({
         />
         <ListaSuspensa
           valor={time}
-          aoAlterar={(valor) => setTime(valor)}
+          idTime={idTime}
+          aoAlterar={(valor) => {
+            setTime(valor.nomeTime);
+            setIdTime(valor.idTime);
+          }}
           obrigatorio={true}
           label="Time"
           itens={times}
@@ -74,7 +81,7 @@ export const Formulario = ({
             cor: corTime,
           });
           setNomeTime("");
-          setCorTime("");
+          setCorTime("#000000");
         }}
       >
         <h2>Preencha os dados para criar um novo time.</h2>
