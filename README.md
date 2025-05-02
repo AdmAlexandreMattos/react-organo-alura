@@ -1,6 +1,6 @@
 # Curso de React com Create React App 🚀
 
-Este projeto foi desenvolvido como parte do curso de React da Alura, com foco na construção de aplicações modernas utilizando o Create React App. Durante o curso, você aprenderá conceitos fundamentais do React e como aplicá-los na prática — da prototipação até o deploy da aplicação.
+Este projeto foi desenvolvido como parte do curso de React da Alura, com foco na construção de aplicações modernas utilizando o Create React App. Durante o curso, aprendi conceitos fundamentais do React e como aplicá-los na prática — da prototipação até o deploy da aplicação.
 
 Link do curso:
 - [React: desenvolvendo com JavaScript](https://cursos.alura.com.br/course/react-desenvolvendo-javascript)
@@ -13,6 +13,8 @@ CEO e cofundador da Alura. Bacharel e mestre em Ciência da Computação pela US
 
 ### Vinicios Neves  
 Tech Lead e Educador, mistura código e didática há mais de uma década. Especialista em TypeScript, lidera equipes full-stack em Portugal e inspira futuros desenvolvedores na FIAP e na Alura. Com um pé no código e outro no ensino, Vinicios mostra que engenharia de software vai muito além das linhas de código — e sim, ele é sênior em dizer que "depende". 😄
+
+### Luiz Fernando Ribeiro  
 
 ---
 
