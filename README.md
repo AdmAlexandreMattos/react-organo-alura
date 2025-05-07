@@ -5,6 +5,7 @@ Este projeto foi desenvolvido como parte do curso de React da Alura, com foco na
 Link do curso:
 - [React: desenvolvendo com JavaScript](https://cursos.alura.com.br/course/react-desenvolvendo-javascript)
 - [React: como os componentes funcionam](https://cursos.alura.com.br/course/react-componentes-funcionam)
+- [Hooks do React: useState](https://cursos.alura.com.br/extra/alura-mais/hooks-do-react-usestate-c1530)
 
 ## 👨‍🏫 Professores
 
