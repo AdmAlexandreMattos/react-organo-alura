@@ -45,6 +45,7 @@ function App() {
   ]);
 
   const [colaboradores, setColaboradores] = useState([]);
+  const [exibirFormulario, setExibirFormulario] = useState(true);
 
   const aoNovoColaboradorAdicionado = (colaborador) => {
     setColaboradores([...colaboradores, colaborador]);
@@ -83,26 +84,41 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Formulario
-        times={times}
-        aoColaboradorCadastrado={(colaborador) =>
-          aoNovoColaboradorAdicionado(colaborador)
-        }
-        cadastrarTime={(colaborador) => cadastrarTime(colaborador)}
-      />
-
-      {times.map((time, indice) => (
-        <Time
-          aoFavoritar={resolverFavorito}
-          key={indice}
-          mudarCor={mudarCorDoTime}
-          time={time}
-          colaboradores={colaboradores.filter(
-            (colaborador) => colaborador.idTime === time.id
-          )}
-          aoDeletar={deletarColaborador}
+      {exibirFormulario === true ? (
+        <Formulario
+          times={times}
+          aoColaboradorCadastrado={(colaborador) =>
+            aoNovoColaboradorAdicionado(colaborador)
+          }
+          cadastrarTime={(colaborador) => cadastrarTime(colaborador)}
         />
-      ))}
+      ) : (
+        ""
+      )}
+
+      <section>
+        <div className="times">
+          <h1>Minha organização :</h1>
+          <img
+            className="teste"
+            onClick={() => setExibirFormulario(!exibirFormulario)}
+            src="/imagens/botaoFormulario.png"
+            alt="imagem de botao para ocultar e exibir o formulário"
+          />
+        </div>
+        {times.map((time, indice) => (
+          <Time
+            aoFavoritar={resolverFavorito}
+            key={indice}
+            mudarCor={mudarCorDoTime}
+            time={time}
+            colaboradores={colaboradores.filter(
+              (colaborador) => colaborador.idTime === time.id
+            )}
+            aoDeletar={deletarColaborador}
+          />
+        ))}
+      </section>
       <Rodape />
     </div>
   );
