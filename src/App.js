@@ -83,7 +83,10 @@ function App() {
 
   return (
     <div className="App">
-      <Banner />
+      <Banner
+        enderecoImagem="/imagens/banner.png"
+        textoAlternativ="O banner principal da página do Organo"
+      />
       {exibirFormulario === true ? (
         <Formulario
           times={times}

@@ -1,5 +1,5 @@
 import ListaSuspensa from "../ListaSuspensa";
-import { Botao } from "../Botao/Botao";
+import Botao from "../Botao";
 import { Campo } from "../Campo/Campo";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
