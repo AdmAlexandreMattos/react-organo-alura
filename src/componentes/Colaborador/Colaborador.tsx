@@ -1,12 +1,20 @@
 import { AiFillCloseCircle, AiFillHeart, AiOutlineHeart } from "react-icons/ai";
 import "./Colaborador.css";
+import { IColaborador } from "../../compartilhados/interfaces/IColaborador";
+
+interface ColaboradorProps {
+  colaborador: IColaborador;
+  corDeFundo: string;
+  aoDeletar: (id: string) => void;
+  aoFavoritar: (id: string) => void;
+}
 
 export const Colaborador = ({
   colaborador,
   corDeFundo,
   aoDeletar,
   aoFavoritar,
-}) => {
+}: ColaboradorProps) => {
   const favoritar = () => {
     aoFavoritar(colaborador.id);
   };
