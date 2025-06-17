@@ -4,12 +4,20 @@ import CampoTexto from "../CampoTexto";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
 import "./Formulario.css";
+import { IColaborador } from "../../compartilhados/interfaces/IColaborador";
+import { ITime } from "../../compartilhados/interfaces/ITime";
+
+interface FormularioProps {
+  aoColaboradorCadastrado: (colaborador: IColaborador) => void;
+  times: ITime[];
+  cadastrarTime: (novoTime: ITime) => void;
+}
 
 export const Formulario = ({
   aoColaboradorCadastrado,
   times,
   cadastrarTime,
-}) => {
+}: FormularioProps) => {
   const [nome, setNome] = useState("");
   const [cargo, setCargo] = useState("");
   const [imagem, setImagem] = useState("");
@@ -19,7 +27,7 @@ export const Formulario = ({
   const [nomeTime, setNomeTime] = useState("");
   const [corTime, setCorTime] = useState("#000000");
 
-  const aoSalvar = (evento) => {
+  const aoSalvar = (evento: React.FormEvent<HTMLFormElement>) => {
     evento.preventDefault();
     aoColaboradorCadastrado({
       id: uuidv4(),
@@ -77,6 +85,7 @@ export const Formulario = ({
         onSubmit={(evento) => {
           evento.preventDefault();
           cadastrarTime({
+            id: uuidv4(),
             nome: nomeTime,
             cor: corTime,
           });

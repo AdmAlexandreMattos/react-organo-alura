@@ -2,9 +2,9 @@ import { ITime } from "../../compartilhados/interfaces/ITime";
 import "./ListaSuspensa.css";
 
 interface ListaSuspensaProps {
-  aoAlterar: (valor: string) => void;
+  aoAlterar: (valor: { nomeTime: string; idTime: string }) => void;
   label: string;
-  required: boolean;
+  obrigatorio: boolean;
   valor: string;
   itens: ITime[];
   idTime: string;
@@ -13,7 +13,7 @@ interface ListaSuspensaProps {
 export const ListaSuspensa = ({
   aoAlterar,
   label,
-  required,
+  obrigatorio,
   valor,
   itens,
   idTime,
@@ -23,7 +23,7 @@ export const ListaSuspensa = ({
       <label>{label}</label>
       <select
         onChange={(evento) => aoAlterar(JSON.parse(evento.target.value))}
-        required={required}
+        required={obrigatorio}
         value={JSON.stringify({ idTime: idTime, nomeTime: valor })}
       >
         <option value="">Selecione um time</option>

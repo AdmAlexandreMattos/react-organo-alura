@@ -52,7 +52,7 @@ function App() {
   };
 
   const cadastrarTime = (novoTime) => {
-    setTimes([...times, { id: uuidv4(), ...novoTime }]);
+    setTimes([...times, novoTime]);
   };
 
   function deletarColaborador(id) {
@@ -93,7 +93,7 @@ function App() {
           aoColaboradorCadastrado={(colaborador) =>
             aoNovoColaboradorAdicionado(colaborador)
           }
-          cadastrarTime={(colaborador) => cadastrarTime(colaborador)}
+          cadastrarTime={(time) => cadastrarTime(time)}
         />
       ) : (
         ""
