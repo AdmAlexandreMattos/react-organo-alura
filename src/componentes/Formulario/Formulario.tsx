@@ -23,6 +23,7 @@ export const Formulario = ({
   const [imagem, setImagem] = useState("");
   const [time, setTime] = useState("");
   const [idTime, setIdTime] = useState("");
+  const [data, setData] = useState("");
 
   const [nomeTime, setNomeTime] = useState("");
   const [corTime, setCorTime] = useState("#000000");
@@ -37,11 +38,13 @@ export const Formulario = ({
       imagem,
       time,
       idTime,
+      data,
     });
     setNome("");
     setCargo("");
     setImagem("");
     setTime("");
+    setData("");
   };
 
   return (
@@ -67,6 +70,13 @@ export const Formulario = ({
           aoAlterar={(valor) => setImagem(valor)}
           label="Imagem"
           placeholder="Informe o endereço da imagem"
+        />
+        <CampoTexto
+          valor={data}
+          aoAlterar={(valor) => setData(valor)}
+          label="Data de entrada no time"
+          placeholder="Informe a data de entrada no time"
+          type="date"
         />
         <ListaSuspensa
           valor={time}

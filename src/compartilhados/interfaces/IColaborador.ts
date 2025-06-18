@@ -6,4 +6,5 @@ export interface IColaborador {
   imagem: string;
   time: string;
   idTime: string;
+  data: string;
 }

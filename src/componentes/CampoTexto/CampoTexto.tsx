@@ -5,7 +5,7 @@ interface CampoTextoProps {
   placeholder: string;
   label: string;
   valor: string;
-  type?: string;
+  type?: "text" | "password" | "date" | "email" | "number" | "color";
   obrigatorio?: boolean;
 }
 
