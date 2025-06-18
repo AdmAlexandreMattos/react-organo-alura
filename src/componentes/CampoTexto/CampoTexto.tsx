@@ -1,16 +1,25 @@
-import "./Campo.css";
+import "./CampoTexto.css";
 
-export const Campo = ({
-  type = "text",
-  label,
-  placeholder,
-  valor,
+interface CampoTextoProps {
+  aoAlterar: (valor: string) => void;
+  placeholder: string;
+  label: string;
+  valor: string;
+  type?: string;
+  obrigatorio?: boolean;
+}
+
+export const CampoTexto = ({
   aoAlterar,
+  placeholder,
+  label,
+  valor,
+  type = "text",
   obrigatorio = false,
-}) => {
+}: CampoTextoProps) => {
   const placeholderModificada = `${placeholder}...`;
 
-  const aoDigitar = (evento) => {
+  const aoDigitar = (evento: React.ChangeEvent<HTMLInputElement>) => {
     aoAlterar(evento.target.value);
   };
 
@@ -18,7 +27,6 @@ export const Campo = ({
     <div className={`campo campo-${type}`}>
       <label>{label}</label>
       <input
-        className=""
         type={type}
         value={valor}
         onChange={aoDigitar}
