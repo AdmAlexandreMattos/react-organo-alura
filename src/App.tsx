@@ -3,9 +3,14 @@ import Formulario from "./componentes/Formulario";
 import Time from "./componentes/Time";
 import Rodape from "./componentes/Rodape";
 import colaboradoresIniciais from "./compartilhados/colaboradoresIniciais.json";
-import { useEffect, useState } from "react";
+import { useEffect, useReducer, useState } from "react";
 import { IColaborador } from "./compartilhados/interfaces/IColaborador";
 import { ITime } from "./compartilhados/interfaces/ITime";
+import reducerCardColaborador, {
+  ADICIONAR_COLABORADOR,
+  REMOVER_COLABORADOR,
+  TOGGLE_FAVORITO,
+} from "./reducerColaborador";
 
 function App() {
   const [times, setTimes] = useState([
@@ -46,16 +51,17 @@ function App() {
     },
   ]);
 
-  const [colaboradores, setColaboradores] = useState<IColaborador[]>([]);
+  const [colaboradores, dispatch] = useReducer(reducerCardColaborador, []);
   const [exibirFormulario, setExibirFormulario] = useState(true);
 
   useEffect(() => {
-    setColaboradores(colaboradoresIniciais.colaboradoresIniciais);
+    colaboradoresIniciais.colaboradoresIniciais.forEach((colaboradores) => {
+      dispatch({ tipo: ADICIONAR_COLABORADOR, colaborador: colaboradores });
+    });
   }, []);
 
   const aoNovoColaboradorAdicionado = (colaborador: IColaborador) => {
-    console.log(colaborador);
-    setColaboradores([...colaboradores, colaborador]);
+    dispatch({ tipo: ADICIONAR_COLABORADOR, colaborador });
   };
 
   const cadastrarTime = (novoTime: ITime) => {
@@ -63,9 +69,7 @@ function App() {
   };
 
   function deletarColaborador(id: string) {
-    setColaboradores(
-      colaboradores.filter((colaborador) => colaborador.id !== id)
-    );
+    dispatch({ tipo: REMOVER_COLABORADOR, id });
   }
 
   function mudarCorDoTime(cor: string, id: string) {
@@ -80,12 +84,7 @@ function App() {
   }
 
   function resolverFavorito(id: string) {
-    setColaboradores(
-      colaboradores.map((colaborador) => {
-        if (colaborador.id === id) colaborador.favorito = !colaborador.favorito;
-        return colaborador;
-      })
-    );
+    dispatch({ tipo: TOGGLE_FAVORITO, id });
   }
 
   return (
