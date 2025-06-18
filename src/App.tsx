@@ -4,6 +4,8 @@ import Time from "./componentes/Time";
 import Rodape from "./componentes/Rodape";
 import { useState } from "react";
 import { v4 as uuidv4 } from "uuid";
+import { IColaborador } from "./compartilhados/interfaces/IColaborador";
+import { ITime } from "./compartilhados/interfaces/ITime";
 
 function App() {
   const [times, setTimes] = useState([
@@ -44,24 +46,24 @@ function App() {
     },
   ]);
 
-  const [colaboradores, setColaboradores] = useState([]);
+  const [colaboradores, setColaboradores] = useState<IColaborador[]>([]);
   const [exibirFormulario, setExibirFormulario] = useState(true);
 
-  const aoNovoColaboradorAdicionado = (colaborador) => {
+  const aoNovoColaboradorAdicionado = (colaborador: IColaborador) => {
     setColaboradores([...colaboradores, colaborador]);
   };
 
-  const cadastrarTime = (novoTime) => {
+  const cadastrarTime = (novoTime: ITime) => {
     setTimes([...times, novoTime]);
   };
 
-  function deletarColaborador(id) {
+  function deletarColaborador(id: string) {
     setColaboradores(
       colaboradores.filter((colaborador) => colaborador.id !== id)
     );
   }
 
-  function mudarCorDoTime(cor, id) {
+  function mudarCorDoTime(cor: string, id: string) {
     setTimes(
       times.map((time) => {
         if (time.id === id) {
@@ -72,7 +74,7 @@ function App() {
     );
   }
 
-  function resolverFavorito(id) {
+  function resolverFavorito(id: string) {
     setColaboradores(
       colaboradores.map((colaborador) => {
         if (colaborador.id === id) colaborador.favorito = !colaborador.favorito;
@@ -85,7 +87,7 @@ function App() {
     <div className="App">
       <Banner
         enderecoImagem="/imagens/banner.png"
-        textoAlternativ="O banner principal da página do Organo"
+        textoAlternativo="O banner principal da página do Organo"
       />
       {exibirFormulario === true ? (
         <Formulario

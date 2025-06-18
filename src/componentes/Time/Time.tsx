@@ -7,9 +7,9 @@ import Colaborador from "../Colaborador";
 interface TimeProps {
   time: ITime;
   colaboradores: IColaborador[];
-  aoDeletar: () => void;
+  aoDeletar: (id: string) => void;
   mudarCor: (cor: any, id: any) => void;
-  aoFavoritar: () => void;
+  aoFavoritar: (id: string) => void;
 }
 
 export const Time = ({
@@ -47,6 +47,6 @@ export const Time = ({
       </div>
     </section>
   ) : (
-    ""
+    <></>
   );
 };
