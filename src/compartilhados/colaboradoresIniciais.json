@@ -1,0 +1,14 @@
+{
+  "colaboradoresIniciais": [
+    {
+      "id": "1",
+      "favorito": false,
+      "nome": "Alexandre Mattos de Castro",
+      "cargo": "Desenvolvedor",
+      "imagem": "https://github.com/AdmAlexandreMattos.png",
+      "time": "Programação",
+      "idTime": "1",
+      "data": "2022-10-13"
+    }
+  ]
+}
