@@ -2,45 +2,45 @@ import Banner from "./componentes/Banner";
 import Formulario from "./componentes/Formulario";
 import Time from "./componentes/Time";
 import Rodape from "./componentes/Rodape";
-import { useState } from "react";
-import { v4 as uuidv4 } from "uuid";
+import colaboradoresIniciais from "./compartilhados/colaboradoresIniciais.json";
+import { useEffect, useState } from "react";
 import { IColaborador } from "./compartilhados/interfaces/IColaborador";
 import { ITime } from "./compartilhados/interfaces/ITime";
 
 function App() {
   const [times, setTimes] = useState([
     {
-      id: uuidv4(),
+      id: "1",
       nome: "Programação",
       cor: "#57C278",
     },
     {
-      id: uuidv4(),
+      id: "2",
       nome: "Front-End",
       cor: "#82CFFA",
     },
     {
-      id: uuidv4(),
+      id: "3",
       nome: "Data Science",
       cor: "#A6D157",
     },
     {
-      id: uuidv4(),
+      id: "4",
       nome: "Devops",
       cor: "#E06B69",
     },
     {
-      id: uuidv4(),
+      id: "5",
       nome: "UX e Desing",
       cor: "#DB6EBF",
     },
     {
-      id: uuidv4(),
+      id: "6",
       nome: "Mobile",
       cor: "#FFBA05",
     },
     {
-      id: uuidv4(),
+      id: "7",
       nome: "Inovação e Gestão",
       cor: "#FF8A29",
     },
@@ -49,7 +49,12 @@ function App() {
   const [colaboradores, setColaboradores] = useState<IColaborador[]>([]);
   const [exibirFormulario, setExibirFormulario] = useState(true);
 
+  useEffect(() => {
+    setColaboradores(colaboradoresIniciais.colaboradoresIniciais);
+  }, []);
+
   const aoNovoColaboradorAdicionado = (colaborador: IColaborador) => {
+    console.log(colaborador);
     setColaboradores([...colaboradores, colaborador]);
   };
 
